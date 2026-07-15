@@ -354,6 +354,8 @@ UnityEngine.Animator::get_runtimeAnimatorController_Injected
 UnityEngine.Animator::GetAnimatorClipInfoInternal_Injected
 UnityEngine.Animator::GetAnimatorStateInfo_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
+UnityEngine.Animator::SetBoolString_Injected
+UnityEngine.Animator::SetFloatString_Injected
 UnityEngine.Animator::SetTriggerString_Injected
 UnityEngine.AnimatorClipInfo::InstanceIDToAnimationClipPPtr_Injected
 UnityEngine.Application::get_isBatchMode
@@ -1145,6 +1147,7 @@ UnityEngine.PhysicsScene::OverlapSphereNonAlloc_Internal_Injected
 UnityEngine.PhysicsScene2D::GetRayIntersectionArray_Internal_Injected
 UnityEngine.PhysicsScene2D::RaycastArray_Internal_Injected
 UnityEngine.PhysicsScene2D::RaycastList_Internal_Injected
+UnityEngine.PhysicsScene2D::CircleCast_Internal_Injected
 UnityEngine.PhysicsScene2D::GetRayIntersection_Internal_Injected
 UnityEngine.PhysicsScene2D::RaycastNativeArray_Internal_Injected
 UnityEngine.PhysicsScene2D::Raycast_Internal_Injected

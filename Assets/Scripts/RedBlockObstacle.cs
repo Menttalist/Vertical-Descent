@@ -1,19 +1,20 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Нужно для перезапуска сцены
 
 public class RedBlockObstacle : MonoBehaviour
 {
-    // Этот метод срабатывает, когда КТО-ТО физически врезается в коллайдер этого блока
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Проверяем, что врезался именно наш управляемый синий куб
-        // (Убедись, что на твоем синем кубе висит скрипт RobotController)
-        if (collision.gameObject.GetComponent<RobotController>() != null)
-        {
-            Debug.Log("Синий куб разбился о красный блок!");
+        // Проверяем, что в красный блок врезался именно робот
+        RobotController robot = collision.gameObject.GetComponent<RobotController>();
 
-            // Перезапускаем текущую сцену с нуля
-            GameManager.Instance.GameOver();
+        if (robot != null)
+        {
+            Debug.Log("Робот наступил на красный блок! Запускаем красивую смерть...");
+
+            // Вместо мгновенного вызова GameOver запускаем метод Die() на самом роботе.
+            // Робот заблокирует управление, включит анимацию "DieTrigger" и сам 
+            // запустит отложенный показ экрана смерти в GameManager!
+            robot.Die();
         }
     }
 }

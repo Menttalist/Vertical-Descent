@@ -25,10 +25,14 @@ public class DeathWave : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 1. Если волна налетает на Игрока
-        if (other.CompareTag("Player") || other.GetComponent<RobotController>() != null)
+        RobotController robot = other.GetComponent<RobotController>();
+        if (robot != null)
         {
-            Debug.Log("Синий куб уничтожен волной смерти!");
-            GameManager.Instance.GameOver();
+            Debug.Log("Волна смерти догнала робота! Запускаем плавное уничтожение...");
+
+            // Вместо мгновенного GameOver вызываем метод Die() у робота.
+            // Он заблокирует управление, включит анимацию смерти и через 1.2 сек покажет экран проигрыша!
+            robot.Die();
             return;
         }
 

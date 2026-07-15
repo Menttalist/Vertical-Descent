@@ -97,6 +97,16 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    // НОВЫЙ МЕТОД ДЛЯ ПЛАВНОЙ СМЕРТИ С ЗАДЕРЖКОЙ
+    public System.Collections.IEnumerator DelayedGameOver(float delay)
+    {
+        // Ждем указанное время (пока робот играет анимацию смерти)
+        yield return new WaitForSeconds(delay);
+
+        // Вызываем твой стандартный экран смерти
+        GameOver();
+    }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
