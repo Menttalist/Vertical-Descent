@@ -145,6 +145,10 @@ public class RobotController : MonoBehaviour
     public void JumpLeft()
     {
         if (isDrilling || !IsGrounded() || isDead) return;
+
+        // Принудительно разворачиваем модельку влево (270 градусов)
+        lastTargetYAngle = 270f;
+
         isJumping = true;
         rb.linearVelocity = new Vector2(-jumpSideForce, jumpHeightForce);
     }
@@ -152,6 +156,10 @@ public class RobotController : MonoBehaviour
     public void JumpRight()
     {
         if (isDrilling || !IsGrounded() || isDead) return;
+
+        // Принудительно разворачиваем модельку вправо (90 градусов)
+        lastTargetYAngle = 90f;
+
         isJumping = true;
         rb.linearVelocity = new Vector2(jumpSideForce, jumpHeightForce);
     }

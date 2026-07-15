@@ -12,6 +12,7 @@ extern void CameraFollow__ctor_m113CC547D419EF599BC487F0F44B06BB2D4EE11B (void);
 extern void DangerIndicator_Start_mC532DD040A44729F777C2B8C32E6960A691A6FB0 (void);
 extern void DangerIndicator_Update_mF8EC0D9D949BA538577BDCA2ABD32939C5359B90 (void);
 extern void DangerIndicator__ctor_mFB67028BA4EFB83E9E7467BD0FBB098B44A8144C (void);
+extern void DeathWave_Start_m6B3F5F89D5F7D0765865515AB18CCA939A8643DE (void);
 extern void DeathWave_Update_m539FF4F9CB65D01B6C04B56ACD15DFB83EF3A3FB (void);
 extern void DeathWave_OnTriggerEnter2D_mC73B9099A0677C65E6E7D2A6EC2FEBE77D6BDC82 (void);
 extern void DeathWave_SpawnEffect_m14BFB3088698E44D8CA864D6E8B616B6C6382BAC (void);
@@ -63,13 +64,14 @@ extern void U3CDrillingRoutineU3Ed__36_System_Collections_IEnumerator_Reset_mB95
 extern void U3CDrillingRoutineU3Ed__36_System_Collections_IEnumerator_get_Current_m8470E4719BF257B00884B18A21AB5BE070319585 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[56] = 
+static Il2CppMethodPointer s_methodPointers[57] = 
 {
 	CameraFollow_LateUpdate_m9C559F2A33098CED5CB8BD82CCD6FC98AB521D61,
 	CameraFollow__ctor_m113CC547D419EF599BC487F0F44B06BB2D4EE11B,
 	DangerIndicator_Start_mC532DD040A44729F777C2B8C32E6960A691A6FB0,
 	DangerIndicator_Update_mF8EC0D9D949BA538577BDCA2ABD32939C5359B90,
 	DangerIndicator__ctor_mFB67028BA4EFB83E9E7467BD0FBB098B44A8144C,
+	DeathWave_Start_m6B3F5F89D5F7D0765865515AB18CCA939A8643DE,
 	DeathWave_Update_m539FF4F9CB65D01B6C04B56ACD15DFB83EF3A3FB,
 	DeathWave_OnTriggerEnter2D_mC73B9099A0677C65E6E7D2A6EC2FEBE77D6BDC82,
 	DeathWave_SpawnEffect_m14BFB3088698E44D8CA864D6E8B616B6C6382BAC,
@@ -122,8 +124,9 @@ static Il2CppMethodPointer s_methodPointers[56] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[56] = 
+static const int32_t s_InvokerIndices[57] = 
 {
+	11745,
 	11745,
 	11745,
 	11745,
@@ -185,7 +188,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	56,
+	57,
 	s_methodPointers,
 	0,
 	NULL,
